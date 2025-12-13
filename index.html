@@ -9,10 +9,12 @@
   </head>
 
   <body>
-    <textarea id="html"></textarea>
-    <textarea id="css"></textarea>
-    <textarea id="js"></textarea>
-    <iframe id="web"></iframe>
+    <section>
+      <label>HTML<textarea id="html"></textarea></label>
+      <label>CSS<textarea id="css"></textarea></label>
+      <label>JS<textarea id="js"></textarea></label>
+      <iframe id="web"></iframe>
+    </section>
     <script>
     function render() {
       web.srcdoc = `
