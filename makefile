@@ -1,7 +1,4 @@
-all: index.html do.min.css
-
-do.min.css:
-	wget https://github.com/jncraton/docss/releases/download/v0.6.0/do.min.css
+all: index.html
 
 lint:
 	npx prettier@3.6.2 --check .
@@ -19,4 +16,4 @@ dev-deps:
 	pip3 install pytest-playwright==0.7.1 && playwright install
 
 clean:
-	rm -rf .pytest_cache __pycache__ favicon* do.min.css
+	rm -rf .pytest_cache __pycache__ favicon*
