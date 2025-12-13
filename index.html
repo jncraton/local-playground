@@ -7,6 +7,19 @@
     <title>Local Playground</title>
     <style>
       :root {
+        color: #000;
+        background: #fff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color: #fff;
+          background: #000;
+        }
+
+        iframe {
+          filter: invert(1);
+        }
       }
 
       * {
