@@ -45,8 +45,8 @@
       <iframe id="web"></iframe>
     </section>
     <script>
-    function render() {
-      web.srcdoc = `
+      function render() {
+        web.srcdoc = `
         <!doctype html>
         <html lang="en">
           <head>
@@ -57,20 +57,20 @@
             <style>${css.value}</style>
           </head>
           <body>
-            ${html.value}
+            ${html.value || 'Output'}
             <script>
               ${js.value}
             <\/script>
           </body>
         </html>
       `
-    }
+      }
 
-    document.querySelectorAll('textarea,input').forEach(el => {
-      el.addEventListener('input', e => {
-        render()
+      document.querySelectorAll('textarea,input').forEach(el => {
+        el.addEventListener('input', e => {
+          render()
+        })
       })
-    })
     </script>
   </body>
 </html>
