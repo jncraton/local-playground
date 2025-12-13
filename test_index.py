@@ -17,3 +17,7 @@ def test_page_title(root):
 def test_basic_html(root):
     root.get_by_label('HTML').fill('<h1>Hello, world</h1>')
     expect(root.frame_locator('iframe').locator('h1')).to_contain_text("Hello, world")
+
+def test_basic_js(root):
+    root.get_by_label('JS').fill("document.write('<h1>Hello, world</h1>')")
+    expect(root.frame_locator('iframe').locator('h1')).to_contain_text("Hello, world")
