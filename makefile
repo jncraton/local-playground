@@ -1,10 +1,10 @@
 all: index.html
 
 lint:
-	npx prettier@3.6.2 --check .
+	npx prettier@3.6.2 --check *.html
 	
 format:
-	npx prettier@3.6.2 --write .
+	npx prettier@3.6.2 --write *.html
 
 test: index.html lint
 	pytest --browser firefox --browser chromium
