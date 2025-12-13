@@ -5,7 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Local Playground</title>
-    <style></style>
+    <style>
+      :root {
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      label,
+      textarea {
+        display: block;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        padding-inline: 0.5em;
+      }
+
+      section textarea {
+        min-height: 10em;
+      }
+
+      iframe {
+        flex-grow: 1;
+      }
+    </style>
   </head>
 
   <body>
