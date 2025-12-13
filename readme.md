@@ -5,3 +5,5 @@
 [![Deploy](https://github.com/jncraton/local-playground/actions/workflows/deploy.yml/badge.svg)](https://github.com/jncraton/local-playground/actions/workflows/deploy.yml)
 
 A local-first coding playground
+
+[Use](https://jncraton.github.io/local-playground/)
