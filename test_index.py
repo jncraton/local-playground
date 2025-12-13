@@ -13,3 +13,7 @@ def root(page: Page):
 
 def test_page_title(root):
     expect(root).to_have_title("Local Playground")
+
+def test_basic_html(root):
+    root.get_by_label('HTML').fill('<h1>Hello, world</h1>')
+    expect(root.frame_locator('iframe').locator('h1')).to_contain_text("Hello, world")
