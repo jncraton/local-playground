@@ -9,6 +9,37 @@
   </head>
 
   <body>
-    <script></script>
+    <textarea id="html"></textarea>
+    <textarea id="css"></textarea>
+    <textarea id="js"></textarea>
+    <iframe id="web"></iframe>
+    <script>
+    function render() {
+      web.srcdoc = `
+        <!doctype html>
+        <html lang="en">
+          <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+            <title>Local Playground</title>
+            <style>${css.value}</style>
+          </head>
+          <body>
+            ${html.value}
+            <script>
+              ${js.value}
+            <\/script>
+          </body>
+        </html>
+      `
+    }
+
+    document.querySelectorAll('textarea,input').forEach(el => {
+      el.addEventListener('input', e => {
+        render()
+      })
+    })
+    </script>
   </body>
 </html>
