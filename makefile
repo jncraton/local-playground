@@ -1,7 +1,7 @@
 all: index.html hashshare.min.js
 
-hashshare.min.js:
-	wget https://github.com/jncraton/hashshare/releases/download/v0.1.0/hashshare.min.js
+hashshare.js:
+	wget https://github.com/jncraton/hashshare/releases/download/v0.1.0/hashshare.js
 
 lint:
 	npx prettier@3.6.2 --check *.html
