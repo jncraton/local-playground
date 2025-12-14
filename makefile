@@ -1,4 +1,4 @@
-all: index.html hashshare.min.js
+all: index.html hashshare.js
 
 hashshare.js:
 	wget https://github.com/jncraton/hashshare/releases/download/v0.1.0/hashshare.js
